@@ -1,0 +1,160 @@
+:root {
+    --color-white: #fff;
+    --color-grey: #c4c4c4;
+}
+
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    display: inline-block;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* End CSS Reset */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--color-grey);
+    background-image: radial-gradient(#ffa620cc 0.8px, #e5e5f7 0.8px);
+    background-size: 1.2rem 1.2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    min-width: 35rem;
+    overflow: hidden;
+    background-color: var(--color-white);
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+/*
+    lights button
+.card__lightsControl {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    top: 2rem;
+}
+
+.card__lightsInput {
+    display: none;
+}
+
+.card__lightsLabel {
+    width: 4.2rem;
+    height: 2.2rem;
+    border-radius: 1.5rem;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 0.3;
+    padding: 0.3rem 0.4rem;
+}
+
+.card__lightsLabel::after {
+    content: "";
+    display: block;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    transition: 0.3s;
+    background-color: var(--color-white);
+}
+
+.card__lightsLabel:hover::after {
+    box-shadow: 0 0 0.5rem 0.1rem #e5951c;
+}
+.card__lightsInput:checked +.card__lightsLabel::after{
+    box-shadow: 0 0 0.3rem 0.2rem green;
+    transform: translateX(2rem);
+} */
+.card__banner {
+    height: 10rem;
+    background-color: var(--color-grey);
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #e5e5f7 16px), repeating-linear-gradient(#fc9701c4, #e5951c);
+}
+
+.card__info {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: -6rem;
+}
+
+.card__profilePic {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    border: 0.4rem solid var(--color-white);
+}
+
+.card__userName {
+    font-size: 2.2rem;
+}
+
+.card__jobTitle {
+    font-size: 1.6rem;
+}
+
+.card__socialMedia {
+    display: flex;
+    margin-top: 3rem;
+    border-top: 0.1rem solid var(--color-grey);
+}
+
+.card__column {
+    flex: 1;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card__column:nth-child(2) {
+    border-right: 0.1rem solid var(--color-grey);
+    border-left: 0.1rem solid var(--color-grey);
+}
+
+.card__socialLink {
+    width: 3rem;
+    height: 3rem;
+    transition: 0.3s;
+}
+
+.card__socialLink:hover {
+    transform: scale(1.2);
+}
